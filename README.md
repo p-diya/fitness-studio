@@ -62,7 +62,3 @@ I played a key role in designing and implementing various aspects of the website
 - `Express.js`: Web application framework for Node.js.
 - `MongoDB`: NoSQL database for storing user accounts, class information, and other data.
 - `CSS`: Styling and layout of the website.
-
-## License
-
-This project is licensed under the MIT License.
