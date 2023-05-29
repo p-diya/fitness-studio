@@ -1,0 +1,23 @@
+<div id="classList">
+  <form method="post">
+    <div class="scheduleList">
+      <img src="{{this.img}}" alt="" />
+      <div>
+        <p class="classDetails">
+
+          {{this.name}}
+          -
+          {{this.level}}
+
+          <span> with </span>
+          {{this.instructor}}
+        </p>
+
+        <p>DURATION : {{this.duration}} mins</p>
+          <button
+            class="cartBtn"
+            formaction="/cart/add/{{this.name}}/{{this.instructor}}/{{this.duration}}/{{this.level}}">Book a Class</button>
+      </div>
+    </div>
+  </form>
+</div>

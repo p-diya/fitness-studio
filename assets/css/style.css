@@ -1,0 +1,423 @@
+/* Colors
+Primary: #4f359b
+Black: #141414
+White: #f6f6f6
+Grey: #ccc
+Lighter Primary: #6749c1
+Darker Primary: #452f89
+Table head: #e6e1f5 
+Error: #B93327
+*/
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 30px;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-size: 16px;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+button {
+	background-color: #4f359b;
+	color: #f6f6f6;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+}
+
+button:hover,
+button:focus {
+	background-color: #6749c1;
+}
+
+button:active {
+	background-color: #452f89;
+	box-shadow: none;
+}
+
+button:disabled {
+	background: #141414;
+}
+
+/* Navbar */
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px;
+	background-color: #141414;
+	color: #f6f6f6;
+}
+
+nav .logo a {
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-right: auto;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul a:hover {
+	color: #9985d5;
+}
+
+nav a {
+	color: #f6f6f6;
+	padding: 10px 20px;
+}
+
+button.login-btn,
+button.logout-btn {
+	font-size: 16px;
+	background-color: transparent;
+	border: 1px solid #f6f6f6;
+	padding: 10px;
+	margin-left: 10px;
+}
+
+button.login-btn:hover,
+button.logout-btn:hover {
+	background-color: #4f359b;
+	border: none;
+}
+
+button a {
+	color: #f6f6f6;
+}
+
+/* Home Page  */
+#home {
+	background-image: linear-gradient(145deg, rgba(0, 0, 0, 0.5), #141414),
+		url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+	background-size: cover;
+	height: 95vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#home > h1 {
+	font-size: 54px;
+	font-weight: 700;
+	color: #f6f6f6;
+	/* margin: 10px 0; */
+	text-align: center;
+}
+
+#home > p {
+	font-size: 24px;
+	text-align: center;
+	max-width: 500px;
+	color: #f6f6f6;
+}
+
+#home button {
+	margin-top: 50px;
+}
+
+/* Login Page */
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+}
+
+.container .form {
+	width: 500px;
+	padding: 50px;
+	background-color: #f6f6f6;
+	border: 1px solid #ccc;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+	border: 2px solid #6749c1;
+}
+
+.container .form button {
+	margin-top: 30px;
+	width: 100%;
+}
+
+.container .form p {
+	padding-top: 30px;
+	text-align: center;
+}
+
+.container .form a {
+	color: #4f359b;
+}
+
+.container .form a:hover {
+	font-weight: 500;
+	color: #6749c1;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #6749c1;
+}
+
+#signup-form input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+#signup-form .membership-options {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+#signup-form .membership-options label {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#signup-form .membership-options input[type="radio"] {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+/* Logout Page */
+.container #logout {
+	width: 500px;
+	padding: 50px;
+	background-color: #f6f6f6;
+	border: 1px solid #ccc;
+}
+
+.container #logoutBtns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 50px;
+}
+
+/* Class Page */
+#class {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	height: 100vh;
+	padding: 50px;
+}
+
+/* Class List */
+.displayClass {
+	margin: 50px 0;
+	width: 70%;
+	padding: 50px;
+	background-color: #e6e1f5;
+	border: 1px solid #ccc;
+}
+
+#classList {
+	width: 100%;
+	background-color: #f6f6f6;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.scheduleList {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	align-items: center;
+}
+
+.scheduleList img {
+	width: 280px;
+	height: 200px;
+}
+
+.classDetails {
+	color: #452f89;
+	text-transform: capitalize;
+	font-weight: 600;
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+
+.classDetails span {
+	color: #141414;
+	font-size: 16px;
+	text-transform: lowercase;
+}
+
+.cartBtn {
+	margin-top: 30px;
+}
+
+/* Cart Page */
+#cart {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	height: 100vh;
+	padding: 50px;
+}
+
+.checkout {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	margin-top: 20px;
+	padding: 50px;
+	background-color: #f6f6f6;
+	border: 1px solid #ccc;
+}
+
+.classSection {
+	margin-top: 30px;
+}
+
+.yourClasses {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.yourClasses h4 {
+	margin-bottom: 10px;
+}
+
+.yourClasses .remove-btn {
+	margin-left: 20px;
+}
+
+.customer form {
+	width: 500px;
+	padding: 50px;
+	background-color: #e6e1f5;
+	border: 1px solid #ccc;
+}
+
+.payment form {
+	width: 500px;
+	padding: 50px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+}
+
+.paymentData {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.payment p {
+	padding-bottom: 10px;
+}
+
+.payment h3 {
+	margin-top: 20px;
+}
+
+.payment button {
+	margin-top: 30px;
+	width: 100%;
+}
+
+/* Admin Page */
+#admin {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	height: 100vh;
+}
+
+#admin .admin-title {
+	margin: 50px 0;
+}
+
+#admin #admin-table {
+	padding: 80px;
+	background-color: #f6f6f6;
+	border: 1px solid #ccc;
+}
+
+#admin #admin-table > table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+#admin #admin-table table th,
+td {
+	border: 1px solid #141414;
+	padding: 10px 20px;
+	text-align: left;
+}
+#admin #admin-table table th {
+	font-weight: 600;
+	background-color: #e6e1f5;
+}
+
+#admin #admin-table table td {
+	font-weight: 400;
+}
+
+#admin .error-div {
+	padding: 80px;
+	margin-top: 50px;
+	background-color: #f6f6f6;
+	border: 1px solid #ccc;
+}
+
+/* Error Message */
+.errorMsg {
+	font-size: 14px;
+	color: #b93327;
+}

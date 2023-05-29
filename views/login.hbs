@@ -1,0 +1,83 @@
+<div class="container">
+	{{#if form}}
+		{{#if formIsLogin}}
+			{{! Login Form }}
+			<div id="login-form" class="form">
+				<form action="/login" method="post" autocomplete="off">
+					<h1>Login</h1>
+					<input
+						type="email"
+						id="login-email"
+						name="email"
+						placeholder="Please enter your email"
+					/>
+
+					<input
+						type="password"
+						id="login-password"
+						name="password"
+						placeholder="Please enter your password"
+					/>
+
+					{{#if message}}
+						<span class="errorMsg">{{message}}</span>
+					{{/if}}
+
+					<button type="submit" id="login-button">Login</button>
+					<p>Are you a new user?
+						<a href="/signup" id="create-account">Create Account</a>
+					</p>
+				</form>
+			</div>
+		{{else}}
+			{{! Signup Form }}
+			<div id="signup-form" class="form">
+				<form action="/signup" method="post" autocomplete="off">
+					<h2>Create Account</h2>
+					<input
+						type="text"
+						id="firstName"
+						name="firstName"
+						placeholder="Please enter your first name"
+						required
+					/>
+
+					<input
+						type="email"
+						id="signup-email"
+						name="newEmail"
+						placeholder="Please enter your email"
+						required
+					/>
+
+					<input
+						type="password"
+						id="signup-password"
+						name="newPassword"
+						placeholder="Please enter your password"
+						required
+					/>
+
+					<label>Sign up for $75 monthly plan</label>
+					<br>
+					<div class="membership-options">
+						<input type="radio" name="isMember" value="yes" id="yes" />
+						<label for="yes">Yes</label>
+					</div>
+					<div class="membership-options">
+						<input type="radio" name="isMember" value="no" id="no" />
+						<label for="no">No</label>
+					</div>
+					<br>
+
+					{{#if message}}
+						<span class="errorMsg">{{message}}</span>
+					{{/if}}
+
+					<button type="submit" id="signup-button">Create Account</button>
+
+				</form>
+			</div>
+		{{/if}}
+	{{/if}}
+</div>

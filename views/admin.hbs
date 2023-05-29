@@ -1,0 +1,50 @@
+<div id="admin">
+	{{#if isAdmin}}
+		<h1 class="admin-title">Admin Dashboard</h1>
+		<div id="admin-table">
+			<h2>List of Purchases</h2>
+			<table id="purchases">
+				<thead>
+					<tr>
+						<th>Customer Name</th>
+						<th>Customer Email</th>
+						<th>Class</th>
+						<th>Level</th>
+						<th>Instructor</th>
+						<th>Duration</th>
+						<th>Membership</th>
+						<th>Amount</th>
+					</tr>
+				</thead>
+
+				<!-- The list of purchases should be generated dynamically here -->
+				<tbody>
+					{{#each userData}}
+						<tr>
+							<td>{{firstName}}</td>
+							<td>{{email}}</td>
+							<td>{{class}}</td>
+							<td>{{level}}</td>
+							<td>{{instructor}}</td>
+							<td>{{duration}}</td>
+							<td>{{#if isMember}}YES{{else}}NO{{/if}}</td>
+							<td>${{amount}}</td>
+						</tr>
+					{{/each}}
+				</tbody>
+
+			</table>
+			<br />
+			<h2>Total Earnings: ${{this.totalAmount}}</h2>
+			<br />
+			<form action="/sort" method="POST">
+			<button id="sort-btn">Sort by email</button>
+			</form>
+		</div>
+	{{else}}
+		<div class="error-div">
+			<h1>Access Denied</h1>
+			<p>{{message}}</p>
+		</div>
+	{{/if}}
+</div>

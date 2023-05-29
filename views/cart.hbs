@@ -1,0 +1,79 @@
+<div class="container" id="cart">
+	<h1>Checkout</h1>
+	<div class="checkout">
+		<div class="customer">
+			<div>
+				<h2>Customer Details</h2>
+				<form class="customerDetails" action="/cart" method="post">
+					<input
+						type="text"
+						id="firstName"
+						name="firstNameIN"
+						placeholder="Enter your name"
+					/>
+					<input
+						type="email"
+						id="email"
+						name="emailIN"
+						value="{{user.email}}"
+						placeholder="Enter your email"
+					/>
+					{{#if user.isMember}}
+						<p id="verified">* Verified Member</p>
+					{{/if}}
+				</form>
+			</div>
+
+			{{! Class in cart }}
+			<div class="classSection">
+				<h2>Your Classes</h2>
+				<div>
+					<form method="POST">
+						{{#if cartData}}
+							{{#each cartData}}
+								<div class="yourClasses">
+									<div>
+										<h4>{{this.className}} - {{this.level}} with {{this.instructor}}</h4>
+										<p>{{this.duration}} mins</p>
+									</div>
+									<button
+										class="remove-btn"
+										formaction="/cart/remove/{{this.className}}/{{this.instructor}}"
+									>Remove</button>
+								</div>
+							{{/each}}
+						{{else}}
+							<div>
+								<p>There are no items in the cart</p>
+							</div>
+						{{/if}}
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="payment">
+			{{! Checkout Details }}
+			<h2>Payment</h2>
+			<form method="POST" action="/pay">
+				<div class="total">
+					<div class="paymentData">
+						<p>Subtotal:</p>
+						<p>$ {{this.subTotalCost}}</p>
+					</div>
+					<div class="paymentData">
+						<p>Tax:</p>
+						<p>13%</p>
+					</div>
+					<hr />
+					<div class="paymentData">
+						<h3>Total:</h3>
+						<h3>$ {{this.totalCost}}</h3>
+					</div>
+					<button type="submit">Pay</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>
