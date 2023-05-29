@@ -43,7 +43,7 @@ app.use(
 
 // MongoDB Atlas database connection
 const mongoose = require("mongoose");
-const uri = `mongodb+srv://admin:admin@fitness-studio.m7y3c1j.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://admin:<password>@fitness-studio.m7y3c1j.mongodb.net/?retryWrites=true&w=majority`;
 mongoose.connect(uri, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
